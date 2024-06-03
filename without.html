@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .news-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+        /* Heading styles */
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+    .news-nav {
+    display: flex;
+    align-items: center;
+}
+
+    .slick-prev,
+    .slick-next {
+        width: 40px;
+        height: 40px;
+        background-color: #007bff; /* Modern color */
+        color: #fff;
+        border: none; /* Remove border */
+        border-radius: 50%; /* Circle shape */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer; /* Change cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth hover effect */
+    }
+
+    .slick-prev:hover,
+    .slick-next:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+    }
+    .fa-solid {
+        font-size: 20px; /* Larger icon size */
+    }
+
+        .slick-prev:before,
+        .slick-next:before {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 16px;
+        }
+
+        .slick-prev:before {
+            content: '\f053';
+        }
+
+        .slick-next:before {
+            content: '\f054';
+        }
+
+        /* News card styles */
+        .news-card {
+        background-color: #f9f9f9; /* Light gray background */
+        border-radius: 15px; /* Slightly rounder corners */
+        border: 1px solid #ddd; /* Light border color */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+        overflow: hidden;
+        margin: 0 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smoother hover effect */
+    }
+        
+
+        /* News image styles */
+        .news-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .news-card:hover .news-image img {
+            transform: scale(1.1);
+        }
+
+        /* News content styles */
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+        .news-title:hover {
+            color: #007bff;
+        }
+
+        .news-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .read-more {
+            font-size: 14px;
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #007bff;
+        }
+
+        .news-date {
+            font-size: 14px;
+            color: #999;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="news-header">
+        <h2>Latest News</h2>
+        <div class="news-nav">
+            <button type="button" class="slick-prev"><i class="fa-solid fa-circle-chevron-left"></i></button>
+            <button type="button" class="slick-next"><i class="fa-solid fa-circle-chevron-right"></i></button>
+        </div>
+    </div>
+    <div class="news-carousel">
+        <div class="news-item">
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="bg1.jpg" alt="News Image">
+                </div>
+                <div class="news-content">
+                    <a href="#" class="news-title">First Profession of 6 Brothers...</a>
+                    <div class="news-footer">
+                        <a href="#" class="read-more">Read More</a>
+                        <small class="news-date"><i class="fas fa-calendar-alt"></i> Dec 9, 2024</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="bg2.jpg" alt="News Image">
+                </div>
+                <div class="news-content">
+                    <a href="#" class="news-title">New School Building Inaugurated...</a>
+                    <div class="news-footer">
+                        <a href="#" class="read-more">Read More</a>
+                        <small class="news-date"><i class="fas fa-calendar-alt"></i> Dec 10, 2024</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="bg3.jpg" alt="News Image">
+                </div>
+                <div class="news-content">
+                    <a href="#" class="news-title">Seminar on some some some...</a>
+                    <div class="news-footer">
+                        <a href="#" class="read-more">Read More</a>
+                        <small class="news-date"><i class="fas fa-calendar-alt"></i> Dec 11, 2024</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-item">
+            <div class="news-card">
+                <div class="news-image">
+                    <img src="bg4.jpg" alt="News Image">
+                </div>
+                <div class="news-content">
+                    <a href="#" class="news-title">Annual Sports Day Celebrated...</a>
+                    <div class="news-footer">
+                        <a href="#" class="read-more">Read More</a>
+                        <small class="news-date"><i class="fas fa-calendar-alt"></i> Dec 12, 2024</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.news-carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow: $('.slick-prev'),
+        nextArrow: $('.slick-next'),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+});
+</script>
+</body>
+</html>

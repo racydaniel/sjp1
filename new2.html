@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Carousel</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    .custom-controls {
+      position: absolute;
+      top: -17%;
+      right: 20px; /* Move the controls to the right */
+      transform: translateY(-50%);
+      /* display: flex;  */
+      align-items: center; /* Center buttons vertically */
+    }
+
+    .arrow-buttons .btn {
+      margin: 0 10px;
+    }
+
+    /* Hide the default carousel controls */
+    .carousel-control-prev, .carousel-control-next {
+      display: none;
+    }
+    .card-img-top {
+      height: 200px; /* Set a fixed height for all images */
+      object-fit: cover; /* Ensure images maintain aspect ratio and cover the entire container */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center mb-5">Latest News</h1>
+    <div id="newsCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <img src="/images/dibosh-grp.jpg" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                  <h5 class="card-title">News Title 1</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum nibh etiam sem...</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <img src="/images/photo_MG_7357.jpg" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                  <h5 class="card-title">News Title 2</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum nibh etiam sem...</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <img src="/images/first-profn-2023.jpg" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                  <h5 class="card-title">News Title 3</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum nibh etiam sem...</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                  <h5 class="card-title">News Title 4</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum nibh etiam sem...</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                  <h5 class="card-title">News Title 5</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum nibh etiam sem...</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="News Image">
+                <div class="card-body">
+                  <h5 class="card-title">News Title 6</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam condimentum nibh etiam sem...</p>
+                  <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Custom navigation buttons -->
+      <div class="custom-controls">
+        <a class="btn btn-primary" href="#newsCarousel" role="button" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+        <a class="btn btn-primary" href="#newsCarousel" role="button" data-slide="next"><i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#newsCarousel').carousel({
+        interval: false,
+        pause: true,
+        wrap: true
+      });
+
+      // Handle arrow button clicks
+      $('.custom-controls .btn').click(function() {
+        var slide = $(this).attr('data-slide');
+        $('#newsCarousel').carousel(slide);
+      });
+    });
+  </script>
+</body>
+</html>
